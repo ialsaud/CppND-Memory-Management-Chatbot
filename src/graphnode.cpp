@@ -8,7 +8,7 @@ GraphNode::GraphNode(int id)
 
 GraphNode::~GraphNode()
 {
-    //// STUDENT CODE
+    //// STUDENT CODE TODO:
     ////
 
     delete _chatBot; 
@@ -32,7 +32,7 @@ void GraphNode::AddEdgeToChildNode(GraphEdge *edge)
     _childEdges.push_back(edge);
 }
 
-//// STUDENT CODE
+//// STUDENT CODE TODO:
 ////
 void GraphNode::MoveChatbotHere(ChatBot *chatbot)
 {
@@ -50,7 +50,7 @@ void GraphNode::MoveChatbotToNewNode(GraphNode *newNode)
 
 GraphEdge *GraphNode::GetChildEdgeAtIndex(int index)
 {
-    //// STUDENT CODE
+    //// STUDENT CODE TODO:
     ////
 
     return _childEdges[index];

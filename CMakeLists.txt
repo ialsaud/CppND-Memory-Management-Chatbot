@@ -7,6 +7,9 @@ project(Membot)
 find_package(wxWidgets REQUIRED COMPONENTS core base)
 include(${wxWidgets_USE_FILE})
 
+# added for debugging
+set(CMAKE_BUILD_TYPE Debug)
+
 file(GLOB project_SRCS src/*.cpp)
 
 add_executable(membot ${project_SRCS})

@@ -30,7 +30,7 @@ ChatBot::ChatBot(std::string filename)
     _image = new wxBitmap(filename, wxBITMAP_TYPE_PNG);
 }
 
-ChatBot::~ChatBot()
+ChatBot::~ChatBot() // I. destructor
 {
     std::cout << "ChatBot Destructor" << std::endl;
 
@@ -84,7 +84,7 @@ ChatBot& ChatBot::operator=(const ChatBot& other){ // III. copy assignment
 }
 
 //override move constructor
-ChatBot::ChatBot(ChatBot&& other){
+ChatBot::ChatBot(ChatBot&& other){ // IV. move constructor
     std::cout << "ChatBot move Constructor" << std::endl;
     
     _chatLogic = other._chatLogic;
@@ -101,7 +101,7 @@ ChatBot::ChatBot(ChatBot&& other){
 }
 
 // override move assignement operator
-ChatBot& ChatBot::operator=(ChatBot&& other){
+ChatBot& ChatBot::operator=(ChatBot&& other){ // V. move assignement
     std::cout << "ChatBot move operator" << std::endl;
         
     if (this == &other) return *this;

@@ -13,7 +13,7 @@ class GraphNode;
 class ChatLogic
 {
 private:
-    //// STUDENT CODE TODO:
+    //// STUDENT CODE
     ////
 
     std::vector<std::unique_ptr<GraphNode>> _nodes;

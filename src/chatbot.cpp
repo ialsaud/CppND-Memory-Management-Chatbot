@@ -42,10 +42,8 @@ ChatBot::~ChatBot() // I. destructor
     }
 }
 
-//// STUDENT CODE TODO:
+//// STUDENT CODE
 ////
-
-// since the deallocation method was overridden then the rule of three applies.
 
 //override copy constructor
 ChatBot::ChatBot(const ChatBot& other){ // II. copy constructor

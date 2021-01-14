@@ -14,7 +14,7 @@ private:
     wxBoxSizer *_dialogSizer;
     wxBitmap _image;
 
-    //// STUDENT CODE TODO:
+    //// STUDENT CODE
     ////
 
     // exclusive resource

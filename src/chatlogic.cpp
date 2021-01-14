@@ -19,8 +19,6 @@ ChatLogic::ChatLogic()
     //// STUDENT CODE
     ////
 
-    // instance of chatbot created in LoadAnswerGraphFromFile
-
     ////
     //// EOF STUDENT CODE
 }
@@ -29,8 +27,6 @@ ChatLogic::~ChatLogic()
 {
     //// STUDENT CODE
     ////
-
-    // deletion of chatlogic object is handled by unique pointer abstracted functionality.
 
     ////
     //// EOF STUDENT CODE
@@ -178,7 +174,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
         return;
     }
 
-    //// STUDENT CODE TODO:
+    //// STUDENT CODE
     ////
 
     // identify root node

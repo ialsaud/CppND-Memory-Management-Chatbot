@@ -45,6 +45,82 @@ ChatBot::~ChatBot()
 //// STUDENT CODE TODO:
 ////
 
+// since the deallocation method was overridden then the rule of three applies.
+
+//override copy constructor
+ChatBot::ChatBot(const ChatBot& other){ // II. copy constructor
+    std::cout << "ChatBot Copy Constructor" << std::endl;
+    
+    
+    _chatLogic = other._chatLogic;
+    _rootNode = other._rootNode;
+    _currentNode = other._currentNode;
+
+    // copy image
+    _image = new wxBitmap(*other._image);
+    _chatLogic->SetChatbotHandle(this);
+}
+
+//override copy assignement operator
+ChatBot& ChatBot::operator=(const ChatBot& other){ // III. copy assignment
+    std::cout << "ChatBot Assignement operator" << std::endl;
+
+    
+    if (this == &other) return *this;
+
+    _chatLogic = other._chatLogic;
+    _rootNode = other._rootNode;
+    _currentNode = other._currentNode;
+
+
+
+    // //deep copy
+    // delete _image;  // deallocate 'this'
+    _image = new wxBitmap(*other._image); // allocate and populate with other's fields
+
+    _chatLogic->SetChatbotHandle(this);
+
+    return *this;
+}
+
+//override move constructor
+ChatBot::ChatBot(ChatBot&& other){
+    std::cout << "ChatBot move Constructor" << std::endl;
+    
+    _chatLogic = other._chatLogic;
+    _rootNode = other._rootNode;
+    _currentNode = other._currentNode;
+    _image = other._image;
+    _chatLogic->SetChatbotHandle(this);
+
+    other._chatLogic = nullptr;
+    other._rootNode = nullptr;
+    other._currentNode = nullptr;
+    other._image = NULL;
+
+}
+
+// override move assignement operator
+ChatBot& ChatBot::operator=(ChatBot&& other){
+    std::cout << "ChatBot move operator" << std::endl;
+        
+    if (this == &other) return *this;
+
+    if (_image != nullptr) delete _image;
+
+    _chatLogic = other._chatLogic;
+    _rootNode = other._rootNode;
+    _rootNode = other._currentNode;
+    _image = other._image;
+    _chatLogic->SetChatbotHandle(this);
+
+    other._chatLogic = nullptr;
+    other._rootNode = nullptr;
+    other._image = NULL;   
+
+    return *this;
+}
+
 ////
 //// EOF STUDENT CODE
 

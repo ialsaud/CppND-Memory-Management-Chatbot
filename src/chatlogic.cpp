@@ -16,14 +16,10 @@
 
 ChatLogic::ChatLogic()
 {
-    //// STUDENT CODE TODO:
+    //// STUDENT CODE
     ////
 
-    // // create instance of chatbot
-    // _chatBot = new ChatBot("../images/chatbot.png");
-
-    // // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
-    // _chatBot->SetChatLogicHandle(this);
+    // instance of chatbot created in LoadAnswerGraphFromFile
 
     ////
     //// EOF STUDENT CODE
@@ -31,23 +27,10 @@ ChatLogic::ChatLogic()
 
 ChatLogic::~ChatLogic()
 {
-    //// STUDENT CODE TODO:
+    //// STUDENT CODE
     ////
 
-    // // delete chatbot instance
-    // delete _chatBot;
-
-    // // delete all nodes
-    // for (auto it = std::begin(_nodes); it != std::end(_nodes); ++it)
-    // {
-    //     delete *it;
-    // }
-
-    // // delete all edges
-    // for (auto it = std::begin(_edges); it != std::end(_edges); ++it)
-    // {
-    //     delete *it;
-    // }
+    // deletion of chatlogic object is handled by unique pointer abstracted functionality.
 
     ////
     //// EOF STUDENT CODE
@@ -125,7 +108,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
                     // node-based processing
                     if (type->second == "NODE")
                     {
-                        //// STUDENT CODE TODO:
+                        //// STUDENT CODE
                         ////
 
                         // check if node with this ID exists already
@@ -148,7 +131,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
                     // edge-based processing
                     if (type->second == "EDGE")
                     {
-                        //// STUDENT CODE TODO:
+                        //// STUDENT CODE
                         ////
 
                         // find tokens for incoming (parent) and outgoing (child) node

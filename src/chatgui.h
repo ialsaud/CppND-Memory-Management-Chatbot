@@ -17,6 +17,7 @@ private:
     //// STUDENT CODE TODO:
     ////
 
+    // exclusive resource
     std::unique_ptr<ChatLogic> _chatLogic;
 
 
